@@ -1,69 +1,167 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="zh">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>图书信息</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏官网</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Top Banner */
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-image: url('https://xmsl.3975.com/public/xmsl/images/1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .banner-buttons {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+        }
+
+        .banner-buttons a {
+            width: 150px;
+            height: 50px;
+            display: block;
+            background-size: cover;
+            text-indent: -9999px;
+        }
+
+        .btn1 {
+            background-image: url('https://xmsl.3975.com/public/xmsl/img/down1.png');
+        }
+
+        .btn2 {
+            background-image: url('https://xmsl.3975.com/public/xmsl/img/down2.png');
+        }
+
+        /* Game Section */
+        .games-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+            padding: 0 10px;
+        }
+
+        .game {
+            width: 120px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .game img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .game-name {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .banner {
+                height: 250px;
+            }
+
+            .games-section {
+                justify-content: space-around;
+            }
+
+            .game {
+                width: 80px;
+            }
+
+            .game img {
+                width: 100%;
+                height: auto;
+            }
+
+            .game-name {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <center><h1>图书信息管理</h1></center>
-    <br /><hr /><br />
-    <center><a href="#">添加图书信息</a></center>
-    <br /><br />
-    <center><caption>图书信息列表</caption></center>
-    <center>
-    <table border="1" width="800" cellspacing="2">
-       <tr bgcolor="#A9B8FF">
-           <td>序号</td>
-           <td>类别</td>
-           <td>图书名</td>
-           <td>作者</td>
-           <td>价格</td>
-           <td>详情</td>
-       </tr>
-         <tr>
-             <td>1</td>
-             <td rowspan="3">古典文学</td>
-             <td>三国演义</td>
-             <td>罗贯中</td>
-             <td>120.5</td>
-             <td><a href="#">查看详情</a></td>
-         </tr>
-         <tr>
-             <td>2</td>
-             <td>西游记</td>
-             <td>吴承恩</td> 
-             <td>88</td> 
-             <td><a href="#">查看详情</a></td>
-         </tr>
-         <tr>
-             <td>3</td> 
-             <td>水浒传</td> 
-             <td>施耐庵</td> 
-             <td>98</td> 
-             <td><a href="#">查看详情</a></td>
-         </tr>
-         <tr>
-             <td>4</td> 
-             <td rowspan="2">科幻小说</td>
-             <td>星战风暴</td>
-             <td>骷髅精灵</td>
-             <td>160</td>
-             <td><a href="#">查看详情</a></td>
-         </tr>
-         <tr>
-             <td>5</td>
-             <td>三体</td>
-             <td>刘慧欣</td>
-             <td>70</td>
-             <td><a href="#">查看详情</a></td></tr>
-         <tr>
-             <td colspan="6" align="right">总计：536.5元</td>
-         </tr>
-        
-       
-        
-    </table>
-        </center>
+
+    <!-- Top Banner -->
+    <div class="banner">
+        <div class="banner-buttons">
+            <a href="https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html" class="btn1"></a>
+            <a href="https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html" class="btn2"></a>
+        </div>
+    </div>
+
+    <!-- Games Section -->
+    <div class="games-section">
+        <!-- Game 1 -->
+        <div class="game" onclick="window.location.href='https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html'">
+            <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67f4c91985d1e.png" alt="游戏图标">
+            <div class="game-name">寻梦丝路</div>
+        </div>
+        <!-- Game 2 -->
+        <div class="game" onclick="window.location.href='https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html'">
+            <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67f4c91985d1e.png" alt="游戏图标">
+            <div class="game-name">寻梦丝路</div>
+        </div>
+        <!-- Game 3 -->
+        <div class="game" onclick="window.location.href='https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html'">
+            <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67f4c91985d1e.png" alt="游戏图标">
+            <div class="game-name">寻梦丝路</div>
+        </div>
+        <!-- Game 4 -->
+        <div class="game" onclick="window.location.href='https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html'">
+            <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67f4c91985d1e.png" alt="游戏图标">
+            <div class="game-name">寻梦丝路</div>
+        </div>
+        <!-- Game 5 -->
+        <div class="game" onclick="window.location.href='https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html'">
+            <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67f4c91985d1e.png" alt="游戏图标">
+            <div class="game-name">寻梦丝路</div>
+        </div>
+        <!-- Game 6 -->
+        <div class="game" onclick="window.location.href='https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html'">
+            <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67f4c91985d1e.png" alt="游戏图标">
+            <div class="game-name">寻梦丝路</div>
+        </div>
+        <!-- Game 7 -->
+        <div class="game" onclick="window.location.href='https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html'">
+            <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67f4c91985d1e.png" alt="游戏图标">
+            <div class="game-name">寻梦丝路</div>
+        </div>
+        <!-- Game 8 -->
+        <div class="game" onclick="window.location.href='https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html'">
+            <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67f4c91985d1e.png" alt="游戏图标">
+            <div class="game-name">寻梦丝路</div>
+        </div>
+        <!-- Game 9 -->
+        <div class="game" onclick="window.location.href='https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html'">
+            <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67f4c91985d1e.png" alt="游戏图标">
+            <div class="game-name">寻梦丝路</div>
+        </div>
+        <!-- Game 10 -->
+        <div class="game" onclick="window.location.href='https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html'">
+            <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67f4c91985d1e.png" alt="游戏图标">
+            <div class="game-name">寻梦丝路</div>
+        </div>
+    </div>
 
 </body>
 </html>
