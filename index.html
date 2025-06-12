@@ -1,167 +1,243 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>游戏官网</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>游戏官网首页</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Arial", sans-serif;
+      background-color: #fdf6e3;
+      color: #333;
+    }
 
-        /* Top Banner */
-        .banner {
-            position: relative;
-            width: 100%;
-            height: 400px;
-            background-image: url('https://xmsl.3975.com/public/xmsl/images/1.jpg');
-            background-size: cover;
-            background-position: center;
-        }
+    .hero {
+      position: relative;
+      width: 100%;
+      max-height: 750px;
+      overflow: hidden;
+    }
 
-        .banner-buttons {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 20px;
-        }
+    .hero img {
+      width: 100%;
+      display: block;
+    }
 
-        .banner-buttons a {
-            width: 150px;
-            height: 50px;
-            display: block;
-            background-size: cover;
-            text-indent: -9999px;
-        }
+    .download-button {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #ffcc00;
+      border: 3px solid #000;
+      border-radius: 12px;
+      padding: 16px 32px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+      text-decoration: none;
+      z-index: 10;
+      transition: background 0.3s;
+    }
 
-        .btn1 {
-            background-image: url('https://xmsl.3975.com/public/xmsl/img/down1.png');
-        }
+    .download-button:hover {
+      background-color: #ffd700;
+    }
 
-        .btn2 {
-            background-image: url('https://xmsl.3975.com/public/xmsl/img/down2.png');
-        }
+    .content {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 16px;
+    }
 
-        /* Game Section */
-        .games-section {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 40px;
-            padding: 0 10px;
-        }
+    .section {
+      margin-bottom: 50px;
+    }
 
-        .game {
-            width: 120px;
-            text-align: center;
-            cursor: pointer;
-        }
+    .section h2 {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-        .game img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
+    .section-divider {
+      width: 80px;
+      height: 3px;
+      background-color: #FFD700;
+      border: none;
+      margin: 0 auto 25px auto;
+      border-radius: 3px;
+    }
 
-        .game-name {
-            margin-top: 10px;
-            font-size: 16px;
-            color: #333;
-        }
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .banner {
-                height: 250px;
-            }
+    .game-card {
+      background: #fff8e1;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 120px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: #333;
+    }
 
-            .games-section {
-                justify-content: space-around;
-            }
+    .game-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
 
-            .game {
-                width: 80px;
-            }
+    .game-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+    }
 
-            .game img {
-                width: 100%;
-                height: auto;
-            }
+    .game-card p {
+      padding: 10px 5px;
+      font-size: 14px;
+      font-weight: bold;
+      word-break: break-word;
+    }
 
-            .game-name {
-                font-size: 14px;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .game-card {
+        width: 100px;
+      }
+      .game-card img {
+        height: 100px;
+      }
+      .section h2 {
+        font-size: 20px;
+      }
+      .download-button {
+        padding: 14px 24px;
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Top Banner -->
-    <div class="banner">
-        <div class="banner-buttons">
-            <a href="https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html" class="btn1"></a>
-            <a href="https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html" class="btn2"></a>
-        </div>
+  <div class="hero">
+    <img src="https://xmsl.3975.com/public/xmsl/images/1.jpg" alt="首页大图">
+    <a class="download-button" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzQxNjUsMzkyMSwxOTQzNDRd">下载游戏</a>
+  </div>
+
+  <div class="content">
+    <div class="section">
+      <h2>热门怀旧游戏</h2>
+      <hr class="section-divider">
+      <div class="games-grid">
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzQwODgsNDA4NywxOTQzNDRd">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67ea2a1f603a8.png" alt="奇迹世界起源">
+          <p>奇迹世界起源</p>
+        </a>
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzQwODEsNDA1OSwxOTQzNDRd">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67dbbacaa9aca.png" alt="魔幻预言">
+          <p>魔幻预言</p>
+        </a>
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzQwMTUsNDAxNCwxOTQzNDRd">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67bc0f413d25f.png" alt="天天龙族">
+          <p>天天龙族</p>
+        </a>
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzM4NzcsMzg3NiwxOTQzNDRd">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/66d16643743a3.png" alt="热江赏金群攻版">
+          <p>热江赏金群攻版</p>
+        </a>
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzAsMzY2OCwxOTQzNDRd">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/66f25375eae1e.png" alt="星辰变归来">
+          <p>星辰变归来</p>
+        </a>
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzM0MjEsMzM5NiwxOTQzNDRd">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/667ba59a71884.png" alt="永恒岛怀旧版">
+          <p>永恒岛怀旧版</p>
+        </a>
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzMzODAsMzM3OSwxOTQzNDRd">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/673746142ff87.png" alt="修仙家族模拟器2">
+          <p>修仙家族模拟器2</p>
+        </a>
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzI3MTMsMjc3NiwxOTQzNDRd">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/66d16643743a3.png" alt="热江怀旧服">
+          <p>热江怀旧服</p>
+        </a>
+      </div>
     </div>
 
-    <!-- Games Section -->
-    <div class="games-section">
-        <!-- Game 1 -->
-        <div class="game" onclick="window.location.href='https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html'">
-            <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67f4c91985d1e.png" alt="游戏图标">
-            <div class="game-name">寻梦丝路</div>
-        </div>
-        <!-- Game 2 -->
-        <div class="game" onclick="window.location.href='https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html'">
-            <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67f4c91985d1e.png" alt="游戏图标">
-            <div class="game-name">寻梦丝路</div>
-        </div>
-        <!-- Game 3 -->
-        <div class="game" onclick="window.location.href='https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html'">
-            <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67f4c91985d1e.png" alt="游戏图标">
-            <div class="game-name">寻梦丝路</div>
-        </div>
-        <!-- Game 4 -->
-        <div class="game" onclick="window.location.href='https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html'">
-            <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67f4c91985d1e.png" alt="游戏图标">
-            <div class="game-name">寻梦丝路</div>
-        </div>
-        <!-- Game 5 -->
-        <div class="game" onclick="window.location.href='https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html'">
-            <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67f4c91985d1e.png" alt="游戏图标">
-            <div class="game-name">寻梦丝路</div>
-        </div>
-        <!-- Game 6 -->
-        <div class="game" onclick="window.location.href='https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html'">
-            <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67f4c91985d1e.png" alt="游戏图标">
-            <div class="game-name">寻梦丝路</div>
-        </div>
-        <!-- Game 7 -->
-        <div class="game" onclick="window.location.href='https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html'">
-            <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67f4c91985d1e.png" alt="游戏图标">
-            <div class="game-name">寻梦丝路</div>
-        </div>
-        <!-- Game 8 -->
-        <div class="game" onclick="window.location.href='https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html'">
-            <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67f4c91985d1e.png" alt="游戏图标">
-            <div class="game-name">寻梦丝路</div>
-        </div>
-        <!-- Game 9 -->
-        <div class="game" onclick="window.location.href='https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html'">
-            <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67f4c91985d1e.png" alt="游戏图标">
-            <div class="game-name">寻梦丝路</div>
-        </div>
-        <!-- Game 10 -->
-        <div class="game" onclick="window.location.href='https://194344.youxin75.com/qudao.php?s=/home/down/down_file/game_id/4110/promote_id/194344.html'">
-            <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67f4c91985d1e.png" alt="游戏图标">
-            <div class="game-name">寻梦丝路</div>
-        </div>
+    <div class="section">
+      <h2>热门传奇传世</h2>
+      <hr class="section-divider">
+      <div class="games-grid">
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzczMCw3MjksMTk0MzQ0XQ==">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/62382c8da641c.png" alt="传奇3光通版">
+          <p>传奇3光通版</p>
+        </a>
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzQxMTEsNDExMCwxOTQzNDRd">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67f4c91985d1e.png" alt="冰雪点卡重制版">
+          <p>冰雪点卡重制版</p>
+        </a>
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzM2NDUsMzY0NCwxOTQzNDRd">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/66ea9a1ba7157.png" alt="冰雪点卡服三职业">
+          <p>冰雪点卡服三职业</p>
+        </a>
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzM5ODYsMzk2NiwxOTQzNDRd">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67aea59e25287.png" alt="龙城秘境法单职业">
+          <p>龙城秘境法单职业</p>
+        </a>
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzM5NjMsMzk2MiwxOTQzNDRd">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67ac5a64084f3.png" alt="烈火皇城">
+          <p>烈火皇城</p>
+        </a>
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzI4MDIsMjgwMSwxOTQzNDRd">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/65d99fbaf3497.png" alt="义战龙城3D">
+          <p>义战龙城3D</p>
+        </a>
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzM3NTEsMzc1MCwxOTQzNDRd">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/66d6c77265187.png" alt="美杜莎点卡服">
+          <p>美杜莎点卡服</p>
+        </a>
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzI2MjUsMjYyNCwxOTQzNDRd">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/658b7fbf80463.png" alt="美杜莎1折">
+          <p>美杜莎1折</p>
+        </a>
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzQwNjYsNDA2NSwxOTQzNDRd">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67e0eee6372da.png" alt="千年3D版">
+          <p>千年3D版</p>
+        </a>
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzM3NTEsMzc1MCwxOTQzNDRd">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/672c21953afbe.png" alt="千年攻速版">
+          <p>千年攻速版</p>
+        </a>
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzIyMTMsMjIxMiwxOTQzNDRd">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/650d395b6d897.png" alt="千年微变版">
+          <p>千年微变版</p>
+        </a>
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzEzNjMsMTM2MiwxOTQzNDRd">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/63a2b2401a018.png" alt="武圣神尊原始千年">
+          <p>武圣神尊原始千年</p>
+        </a>
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzEwNzgsMTA3NywxOTQzNDRd">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/62f1fa2cc2650.png" alt="传世无双">
+          <p>传世无双</p>
+        </a>
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzQwMjksNDAyOCwxOTQzNDRd">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/67c65713eb6fc.png" alt="热血点卡赏金版">
+          <p>热血点卡赏金版</p>
+        </a>
+        <a class="game-card" href="https://194344.youxin75.com/qudao.php?s=/Download/f/WzM2OCwzNjcsMTk0MzQ0XQ==">
+          <img src="http://youxin75.oss-cn-hangzhou.aliyuncs.com/icon/60d3f3d447e36.png" alt="热血传说复古传奇">
+          <p>热血传说复古传奇</p>
+        </a>
+      </div>
     </div>
-
+  </div>
 </body>
 </html>
